@@ -11,6 +11,8 @@ export class OrderComponent {
 
   public isUpperCase: boolean = false;
 
+  public orderBy?: keyof Hero;
+
   public heroes: Hero[] = [
     {
       name: 'Superman',
@@ -34,8 +36,12 @@ export class OrderComponent {
     },
   ]
 
-  toogleUpperCase(): void {
+  public toogleUpperCase(): void {
     this.isUpperCase = !this.isUpperCase;
+  }
+
+  public changeOrder( value: keyof Hero ): void {
+    this.orderBy = value;
   }
 
 }
