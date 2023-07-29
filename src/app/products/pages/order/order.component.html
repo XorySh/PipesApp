@@ -1,11 +1,11 @@
-<p-panel header="Pipes Personalizados" class="p-1">
+<p-panel header="Pipes Personalizados" class="p-1 col-12">
   <p>
     Pipes personalizados - Creados por {{ 'nosotros' | toggleCase: isUpperCase }}
   </p>
 
 </p-panel>
 
-<p-toolbar>
+<p-toolbar class="col-12">
   <div class="p-toolbar-group-start">
     <p-button
       label="ToogleCase"
@@ -45,9 +45,9 @@
 </p-toolbar>
 
 <div class="grid">
-  <div class="col mt-2">
+  <div class="col-12 mt-2">
     <p-panel header="Héroes">
-        <p-table [value]="heroes | sortBy: orderBy" [tableStyle]="{ 'min-width': '50rem' }">
+        <p-table  [value]="heroes | sortBy: orderBy" [tableStyle]="{ 'min-width': '50rem' }" >
           <ng-template pTemplate="header">
               <tr>
                   <th>Nombre</th>
